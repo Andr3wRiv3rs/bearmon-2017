@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bearmon</title>
+        <script src="./gj.api.js"></script>
+        <script src="./peer.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Poiret One" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+        <script src="http://zeptojs.com/zepto.min.js"></script>
+    </head>
+    <body>
+        <div id='login'><br>
+            <h1>Username:
+            <input id="i-user"/><br></h1><br>
+            <h1>Token:
+            <input id="i-token"/></h1>
+            <br><h1>
+            <button id="b-login">Login</button></h1>
+            
+            <br><br><br>
+            
+            <p style="font-size:20px;"><b>Note:</b> This game remains untested outside of Chrome.</p>
+        </div>
+        
+        <div id="main">
+            <div class="main">
+
+                <div class="log left">
+                    <div id="chat" class="mainLog">
+                    <span id="bottom"></span>
+                    </div>
+                    <input type="text" onkeypress="if(event.keyCode==13&&/\w/g.test(this.value)){message(this.value); this.value=''}" id="input">
+                </div>
+
+                <div class="buttons right">
+                    <a class="right" onclick="pClose();">Disconnect</a>
+                    <a class="right" onclick="attack(0)">Slash</a>
+                    <a class="right" onclick="attack(1)">Defend</a>
+                    <a class="right" onclick="attack(2)">Heal</a>
+                    <a class="right" onclick="attack(3)">Focus</a>
+                    <a class="right" onclick="attack(4)">Aggression</a>
+                    
+                    <a id="l-stats" class="right">
+                        My Bear<br><br>
+                        <p id="l-hp">HP:</p>
+                        <p id="l-atk">ATK:</p>
+                        <p id="l-def">DEF:</p>
+                        <p id="l-acc">ACC:</p>
+                    </a>
+                    
+                    <a id="r-stats" class="right">
+                        Opponent<br><br>
+                        <p id="r-hp">HP:</p>
+                        <p id="r-atk">ATK:</p>
+                        <p id="r-def">DEF:</p>
+                        <p id="r-acc">ACC:</p>
+                    </a>
+                </div>
+
+            </div>
+            
+            
+            
+            <!--<div id="players">
+                <input onkeypress="if(event.keyCode == 13){establish(this.value);this.value=''}" placeholder="Connect Directly" id="direct">
+            </div>-->
+        </div>
+        
+        <div class="popupContainer"></div>
+        <div id="bears">
+            
+            <div class="bear" style="background-image:url('bear1.png')" onclick="bear(0)"></div>
+            
+            <div class="details">
+                <br>GRIZZLY BEAR<br><br>
+                <p>MOST BALANCED OF THE BEARS.</p>
+            </div>
+            
+            <div class="bear" style="background-image:url('bear2.png')" onclick="bear(1)"></div>
+            
+            <div class="details">
+                <br>PANDA BEAR<br><br>
+                <p>EXPERT IN MEDICINE, HIGH HP.</p>
+            </div>
+            
+            <div class="bear" style="background-image:url('bear3.png')" onclick="bear(2)"></div>
+            
+            <div class="details">
+                <br>POLAR BEAR<br><br>
+                <p>FISHING EXPERT, HIGH FOCUS.</p>
+            </div>
+            
+            <div class="bear" style="background-image:url('bear4.png')" onclick="bear(3)"></div>
+            
+            <div class="details">
+                <br>BLACK BEAR<br><br>
+                <p>MOST AGGRESSIVE, HIGH DAMAGE.</div>
+            </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

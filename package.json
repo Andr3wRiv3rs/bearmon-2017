@@ -1,0 +1,32 @@
+{
+  "name": "bearmon",
+  "version": "1.0.0",
+  "description": "Bearmon is kool.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": {
+    "name": "Andrew Rivers",
+    "email": "andrewarivers@gmail.com",
+    "url": "https://andrewrivers.me"
+  },
+  "homepage": "https://andrewrivers.me",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.7"
+  },
+  "build": {
+    "appId": "com.electron.bearmon",
+    "linux": {
+      "target": "deb",
+      "icon": "bear.png"
+    },
+    "win": {
+      "target": "zip",
+      "icon": "bear.png"
+    }
+  }
+}
